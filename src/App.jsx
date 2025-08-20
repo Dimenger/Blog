@@ -1,11 +1,15 @@
-import "./App.css";
+import styled from "styled-components";
 
-function App() {
+const Div = styled.div`
+  text-align: center;
+`;
+
+export function App() {
   return (
     <>
-      <div>Blog</div>
+      <div>
+        <Div>Blog</Div>
+      </div>
     </>
   );
 }
-
-export default App;
