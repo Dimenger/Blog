@@ -8,6 +8,7 @@ export function App() {
   return (
     <>
       <div>
+        <i className="fa fa-camera-retro"></i>
         <Div>Blog</Div>
       </div>
     </>
