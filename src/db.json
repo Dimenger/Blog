@@ -4,7 +4,7 @@
       "id": "qwertyui",
       "login": "John",
       "password": "poiu",
-      "registed_at": "2025-02-01",
+      "registed_at": "2025-02-01 10:04",
       "role_id": 0
     }
   ],
@@ -18,11 +18,11 @@
       "name": "Moderator"
     },
     {
-      "id": 1,
+      "id": 2,
       "name": "Reader"
     },
     {
-      "id": 2,
+      "id": 3,
       "name": "Guest"
     }
   ],
