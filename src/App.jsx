@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { Header } from "./components/header/header";
+import { Footer } from "./components/footer/footer";
 import styled from "styled-components";
 
 const AppColumn = styled.div`
@@ -18,8 +19,6 @@ const Content = styled.div`
 const H2 = styled.div`
   text-align: center;
 `;
-
-const Footer = () => <div>Footer</div>;
 
 export function App() {
   return (
