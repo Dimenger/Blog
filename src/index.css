@@ -1,1 +1,32 @@
 /* @import url('font-awesome/css/font-awesome.css'); */
+
+/* :root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #407060;
+}
+
+html,
+body,
+#root {
+height: 100%;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
