@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { Header } from "./components/header/header";
 import { Footer } from "./components/footer/footer";
+import { Authorization } from "./pages/authorization/authorization";
 import styled from "styled-components";
 
 const AppColumn = styled.div`
@@ -16,9 +17,6 @@ const AppColumn = styled.div`
 const Content = styled.div`
   padding: 120px 0;
 `;
-const H2 = styled.div`
-  text-align: center;
-`;
 
 export function App() {
   return (
@@ -26,10 +24,9 @@ export function App() {
       <AppColumn>
         <Header />
         <Content>
-          <H2>Page content</H2>
           <Routes>
             <Route path="/" element={<div>Main page</div>} />
-            <Route path="/login" element={<div>Authorization</div>} />
+            <Route path="/login" element={<Authorization />} />
             <Route path="/register" element={<div>Registration</div>} />
             <Route path="/users" element={<div>Users</div>} />
             <Route path="/post" element={<div>Post</div>} />

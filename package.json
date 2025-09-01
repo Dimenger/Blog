@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.2.1",
     "git": "^0.1.5",
     "prop-types": "^15.8.1",
     "react": "^19.1.1",
@@ -20,7 +21,8 @@
     "redux": "^5.0.1",
     "redux-thunk": "^3.1.0",
     "styled-components": "^6.1.19",
-    "yu": "^1.0.0"
+    "yu": "^1.0.0",
+    "yup": "^1.7.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
