@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { Icon } from "../../../icon/icon";
+import { Button } from "../../../button/button";
 import styled from "styled-components";
 
 const RightAligned = styled.div`
@@ -7,20 +8,7 @@ const RightAligned = styled.div`
   justify-content: flex-end;
 `;
 
-const StyledLink = styled(Link)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-  width: 100px;
-  height: 30px;
-  color: #000;
-  text-decoration: none;
-  border: 1px solid #000;
-  background-color: #eee;
-`;
-
-const StyledButton = styled.div`
+const StyledIcon = styled.div`
   &:hover {
     cursor: pointer;
   }
@@ -32,14 +20,14 @@ const ControlPanelConteiner = ({ className }) => {
   return (
     <div className={className}>
       <RightAligned>
-        <StyledLink type="button" to="/login">
-          Войти
-        </StyledLink>
+        <Button>
+          <Link to="/login">Войти</Link>{" "}
+        </Button>
       </RightAligned>
       <RightAligned>
-        <StyledButton onClick={() => navigate(-1)}>
+        <StyledIcon onClick={() => navigate(-1)}>
           <Icon id="fa-backward" margin="10px 5px" />
-        </StyledButton>
+        </StyledIcon>
 
         <Link to="/post">
           <Icon id="fa-file-text-o" margin="10px 5px" />
