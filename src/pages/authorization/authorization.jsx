@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { server } from "../../bff";
@@ -7,8 +8,10 @@ import { Input } from "../../components/input/input";
 import { Button } from "../../components/button/button";
 import { H2 } from "../../components/h2/h2";
 import { Link } from "react-router-dom";
+import { setUser } from "../../action";
 
 import styled from "styled-components";
+
 /* Схема для валидации */
 
 const authFormSchema = yup.object().shape({
@@ -57,12 +60,15 @@ const AuthorizationContainer = ({ className }) => {
   });
 
   const [serverError, setServerError] = useState(null);
+  const dispatch = useDispatch();
 
   const onSubmit = ({ login, password }) => {
     server.authorize(login, password).then(({ error, res }) => {
       if (error) {
         setServerError(`Ошибка запроса: ${error}`);
+        return;
       }
+      dispatch(setUser(res));
     });
   };
 
@@ -85,7 +91,7 @@ const AuthorizationContainer = ({ className }) => {
         />
         <Button type="submit" disabled={!!formError}>
           <H2>Авторизоваться</H2>
-        </Button>{" "}
+        </Button>
         <StyledLink to="/register">Регистрация</StyledLink>
         {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
       </form>
