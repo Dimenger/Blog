@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { Header } from "./components/header/header";
 import { Footer } from "./components/footer/footer";
 import { Authorization } from "./pages/authorization/authorization";
+import { Registration } from "./pages/registration/registration";
 import styled from "styled-components";
 
 const AppColumn = styled.div`
@@ -27,7 +28,7 @@ export function App() {
           <Routes>
             <Route path="/" element={<div>Main page</div>} />
             <Route path="/login" element={<Authorization />} />
-            <Route path="/register" element={<div>Registration</div>} />
+            <Route path="/register" element={<Registration />} />
             <Route path="/users" element={<div>Users</div>} />
             <Route path="/post" element={<div>Post</div>} />
             <Route path="/post/:post_id" element={<div>New Post</div>} />
