@@ -1,10 +1,16 @@
+import { transformUser } from "../transformers";
+
 export const getUsers = async () => {
   try {
     const response = await fetch("http://localhost:3000/users");
     if (!response.ok) {
       throw new Error(`Ошибка ${response.status}: ${response.statusText}`);
     }
-    return await response.json();
+
+    const users = await response.json();
+    console.log("Полученные данные users:", users);
+
+    return users && users.map(transformUser);
   } catch (error) {
     console.error("Ошибка загрузки:", error);
   }
