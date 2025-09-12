@@ -22,7 +22,6 @@ const PostContainer = ({ className }) => {
 
   return (
     <div className={className}>
-      <div>{post.title}</div>
       <PostContent post={post} />
       <Comments comments={post.comments} />
 
@@ -31,4 +30,7 @@ const PostContainer = ({ className }) => {
   );
 };
 
-export const Post = styled(PostContainer)``;
+export const Post = styled(PostContainer)`
+  margin: 40px 0;
+  padding: 40px 80px;
+`;
