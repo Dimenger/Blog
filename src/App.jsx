@@ -4,6 +4,8 @@ import { Footer } from "./components/footer/footer";
 import { Authorization } from "./pages/authorization/authorization";
 import { Registration } from "./pages/registration/registration";
 import { Users } from "./pages/users/users";
+import { Post } from "./pages/post/post";
+
 import styled from "styled-components";
 
 const AppColumn = styled.div`
@@ -31,8 +33,8 @@ export function App() {
             <Route path="/login" element={<Authorization />} />
             <Route path="/register" element={<Registration />} />
             <Route path="/users" element={<Users />} />
-            <Route path="/post" element={<div>Post</div>} />
-            <Route path="/post/:post_id" element={<div>New Post</div>} />
+            <Route path="/post" element={<div>Новая статья</div>} />
+            <Route path="/post/:id" element={<Post />} />
             <Route path="*" element={<div>Error</div>} />
           </Routes>
         </Page>
