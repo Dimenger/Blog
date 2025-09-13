@@ -5,7 +5,7 @@ import { H2 } from "../../components/h2/h2";
 import { PostContent } from "./post-content/post-content";
 import { Comments } from "./comments/comments";
 import { useServerRequest } from "../../hooks";
-import { loadPostAsync } from "../../action/load-post-async";
+import { loadPostAsync } from "../../actions/load-post-async";
 import { selectPost } from "../../selectors";
 
 import styled from "styled-components";
@@ -23,7 +23,7 @@ const PostContainer = ({ className }) => {
   return (
     <div className={className}>
       <PostContent post={post} />
-      <Comments comments={post.comments} />
+      <Comments comments={post.comments} postId={post.id} />
 
       <H2></H2>
     </div>

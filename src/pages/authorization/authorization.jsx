@@ -8,7 +8,7 @@ import { Input } from "../../components/input/input";
 import { Button } from "../../components/button/button";
 import { H2 } from "../../components/h2/h2";
 import { Link, Navigate } from "react-router-dom";
-import { setUser } from "../../action";
+import { setUser } from "../../actions";
 import { selectUserRole } from "../../selectors";
 import { AuthFormError } from "../../components/auth-form-error/auth-form-error";
 import { useResetForm } from "../../hooks";

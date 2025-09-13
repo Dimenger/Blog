@@ -8,7 +8,7 @@ import {
   selectUserLogin,
   selectUserSession,
 } from "../../../../selectors";
-import { logout } from "../../../../action/logout";
+import { logout } from "../../../../actions/logout";
 
 import styled from "styled-components";
 

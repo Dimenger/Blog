@@ -1,0 +1,13 @@
+export const getComments = async (postId) => {
+  try {
+    const response = await fetch(
+      `http://localhost:3000/comments?post_id=${postId}`
+    );
+    if (!response.ok) {
+      throw new Error(`Ошибка ${response.status}: ${response.statusText}`);
+    }
+    return await response.json();
+  } catch (error) {
+    console.error("Ошибка загрузки:", error);
+  }
+};
