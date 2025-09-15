@@ -15,7 +15,7 @@ const CommentContainer = ({ className, author, publishedAt, content }) => {
           />
           {author}
         </div>
-        <div className="publishedAt">
+        <div className="published-at">
           <Icon
             id="fa-calendar-o"
             margin="0 10px 0 10px"
@@ -31,7 +31,7 @@ const CommentContainer = ({ className, author, publishedAt, content }) => {
 };
 
 export const Comment = styled(CommentContainer)`
-  & information-panel {
+  & .information-panel {
     display: flex;
     justify-content: space-between;
   }

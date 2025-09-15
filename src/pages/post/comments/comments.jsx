@@ -37,7 +37,7 @@ const CommentsContainer = ({ className, comments, postId }) => {
         />
       </div>
       <div className="comments">
-        {comments.map((id, author, content, publishedAt) => (
+        {comments.map(({ id, author, content, publishedAt }) => (
           <Comment
             key={id}
             id={id}
@@ -52,7 +52,6 @@ const CommentsContainer = ({ className, comments, postId }) => {
 };
 
 export const Comments = styled(CommentsContainer)`
-  display: flex;
   width: 580px;
   margin: 0 auto;
 

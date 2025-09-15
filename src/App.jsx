@@ -1,4 +1,7 @@
 import { Routes, Route } from "react-router-dom";
+import { useLayoutEffect } from "react";
+import { useDispatch } from "react-redux";
+import { setUser } from "./actions";
 import { Header } from "./components/header/header";
 import { Footer } from "./components/footer/footer";
 import { Authorization } from "./pages/authorization/authorization";
@@ -23,6 +26,25 @@ const Page = styled.div`
 `;
 
 export function App() {
+  const dispatch = useDispatch();
+
+  useLayoutEffect(() => {
+    const currentUserDataJSON = sessionStorage.getItem("userData");
+
+    if (!currentUserDataJSON) {
+      return;
+    }
+
+    const currentUserData = JSON.parse(currentUserDataJSON);
+
+    dispatch(
+      setUser({
+        ...currentUserData,
+        roleId: Number(currentUserData.roleId),
+      })
+    );
+  }, [dispatch]);
+
   return (
     <>
       <AppColumn>
