@@ -8,6 +8,7 @@ import { Authorization } from "./pages/authorization/authorization";
 import { Registration } from "./pages/registration/registration";
 import { Users } from "./pages/users/users";
 import { Post } from "./pages/post/post";
+import { Modal } from "./components/modal/modal";
 
 import styled from "styled-components";
 
@@ -61,6 +62,7 @@ export function App() {
           </Routes>
         </Page>
         <Footer />
+        <Modal />
       </AppColumn>
     </>
   );
