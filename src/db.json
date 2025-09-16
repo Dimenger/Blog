@@ -112,26 +112,34 @@
       "post_id": "001",
       "published_at": "2025-09-15 17:38",
       "content": "third comment"
-    },
-    {
-      "id": "44ef",
-      "author_id": "qwertyui",
-      "post_id": "001",
-      "published_at": "2025-09-15 17:42",
-      "content": "rrrrrrrrrrr"
-    },
-    {
-      "id": "2894",
-      "author_id": "qwertyui",
-      "post_id": "001",
-      "published_at": "2025-09-15 17:42",
-      "content": "rrrrrrrrrrr"
     }
   ],
   "sessions": [
     {
       "id": "6266",
       "hash": "0.99896802392662142899837363074766471982002258300781",
+      "user": {
+        "id": "qwertyui",
+        "login": "Adam",
+        "password": "qwe123",
+        "registeredAt": "2025-02-01 10:04",
+        "roleId": 0
+      }
+    },
+    {
+      "id": "66f5",
+      "hash": "0.92729739520001852604025316395564004778861999511719",
+      "user": {
+        "id": "qwertyui",
+        "login": "Adam",
+        "password": "qwe123",
+        "registeredAt": "2025-02-01 10:04",
+        "roleId": 0
+      }
+    },
+    {
+      "id": "5245",
+      "hash": "0.03148842676645136062774099627858959138393402099609",
       "user": {
         "id": "qwertyui",
         "login": "Adam",
