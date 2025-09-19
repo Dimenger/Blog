@@ -27,9 +27,6 @@ const UsersContainer = ({ className }) => {
         return;
       }
 
-      console.log("Полученные пользователи:", usersRes.res);
-      console.log("Полученные роли:", rolesRes.res);
-
       setUsers(usersRes.res);
       setRoles(rolesRes.res);
     });

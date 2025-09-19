@@ -12,11 +12,6 @@ export const useServerRequest = () => {
         ? params
         : [session, ...params];
 
-      console.log(
-        `[useServerRequest] Operation: ${operation}, reqeust:`,
-        reqeust
-      );
-
       return server[operation](...reqeust);
     },
     [session]
