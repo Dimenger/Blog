@@ -33,16 +33,20 @@ const SpecialPanelContainer = ({ id, className, publishedAt, editButton }) => {
   return (
     <div className={className}>
       <div className="pablished-at">
-        <Icon id="fa-calendar-o" margin="0 10px 0 10px" onClick={() => {}} />
+        {publishedAt && (
+          <Icon id="fa-calendar-o" margin="0 10px 0 10px" onClick={() => {}} />
+        )}
         {publishedAt}
       </div>
       <div className="buttons">
         {editButton}
-        <Icon
-          id="fa-trash-o"
-          margin="0 10px 0 10px"
-          onClick={() => onPostRemove(id)}
-        />
+        {publishedAt && (
+          <Icon
+            id="fa-trash-o"
+            margin="0 10px 0 10px"
+            onClick={() => onPostRemove(id)}
+          />
+        )}
       </div>
     </div>
   );

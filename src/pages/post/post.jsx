@@ -7,6 +7,7 @@ import { Comments } from "./comments/comments";
 import { PostForm } from "./comments/components/post-form/post-form";
 import { useServerRequest } from "../../hooks";
 import { loadPostAsync, RESET_POST_DATA } from "../../actions";
+// import { inintialPostState } from "../../reducers";
 import { selectPost } from "../../selectors";
 import { useLayoutEffect } from "react";
 
@@ -16,20 +17,25 @@ const PostContainer = ({ className }) => {
   const dispatch = useDispatch();
   const params = useParams();
   const isEditing = useMatch("/post/:id/edit");
+  const isCreating = useMatch("/post");
   const requestServer = useServerRequest();
   const post = useSelector(selectPost);
 
   useLayoutEffect(() => {
     dispatch(RESET_POST_DATA);
-  }, [dispatch]);
+  }, [dispatch, isCreating]);
 
   useEffect(() => {
+    if (isCreating) {
+      return;
+    }
+
     dispatch(loadPostAsync(requestServer, params.id));
-  }, [dispatch, requestServer, params.id]);
+  }, [dispatch, requestServer, params.id, isCreating]);
 
   return (
     <div className={className}>
-      {isEditing ? (
+      {isEditing || isCreating ? (
         <PostForm post={post} />
       ) : (
         <>
