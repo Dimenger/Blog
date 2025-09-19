@@ -6,8 +6,9 @@ import { PostContent } from "./post-content/post-content";
 import { Comments } from "./comments/comments";
 import { PostForm } from "./comments/components/post-form/post-form";
 import { useServerRequest } from "../../hooks";
-import { loadPostAsync } from "../../actions/load-post-async";
+import { loadPostAsync, RESET_POST_DATA } from "../../actions";
 import { selectPost } from "../../selectors";
+import { useLayoutEffect } from "react";
 
 import styled from "styled-components";
 
@@ -17,6 +18,10 @@ const PostContainer = ({ className }) => {
   const isEditing = useMatch("/post/:id/edit");
   const requestServer = useServerRequest();
   const post = useSelector(selectPost);
+
+  useLayoutEffect(() => {
+    dispatch(RESET_POST_DATA);
+  }, [dispatch]);
 
   useEffect(() => {
     dispatch(loadPostAsync(requestServer, params.id));
