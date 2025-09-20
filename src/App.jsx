@@ -11,6 +11,7 @@ import { Post } from "./pages/post/post";
 import { Modal } from "./components/modal/modal";
 
 import styled from "styled-components";
+import { Main } from "./pages/post/main/main";
 
 const AppColumn = styled.div`
   display: flex;
@@ -52,7 +53,7 @@ export function App() {
         <Header />
         <Page>
           <Routes>
-            <Route path="/" element={<div>Main page</div>} />
+            <Route path="/" element={<Main />} />
             <Route path="/login" element={<Authorization />} />
             <Route path="/register" element={<Registration />} />
             <Route path="/users" element={<Users />} />
