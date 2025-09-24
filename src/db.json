@@ -192,6 +192,17 @@
         "registeredAt": "2025-02-01 10:04",
         "roleId": 0
       }
+    },
+    {
+      "id": "cef5",
+      "hash": "0.71993868270819028065687916750903241336345672607422",
+      "user": {
+        "id": "qwertyui",
+        "login": "Adam",
+        "password": "qwe123",
+        "registeredAt": "2025-02-01 10:04",
+        "roleId": 0
+      }
     }
   ]
 }

@@ -1,4 +1,4 @@
-import { Icon } from "../../../../../components/icon/icon";
+import { Icon } from "../../../../components/icon/icon";
 import { Link } from "react-router-dom";
 
 import styled from "styled-components";

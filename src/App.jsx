@@ -9,9 +9,9 @@ import { Registration } from "./pages/registration/registration";
 import { Users } from "./pages/users/users";
 import { Post } from "./pages/post/post";
 import { Modal } from "./components/modal/modal";
+import { Main } from "./pages/main/main";
 
 import styled from "styled-components";
-import { Main } from "./pages/post/main/main";
 
 const AppColumn = styled.div`
   display: flex;
