@@ -168,6 +168,13 @@
       "post_id": "002",
       "published_at": "2025-09-20 12:58",
       "content": "Первый второй комментарий"
+    },
+    {
+      "id": "fc58",
+      "author_id": "qwertyui",
+      "post_id": "002",
+      "published_at": "2025-09-24 09:49",
+      "content": "Второй комент"
     }
   ],
   "sessions": [

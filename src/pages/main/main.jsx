@@ -11,26 +11,33 @@ import styled from "styled-components";
 const MainContainer = ({ className }) => {
   const [posts, setPosts] = useState([]);
   const [page, setPage] = useState(1);
-  const [shouldSearch, setShouldSearch] = useState(false);
   const [searchPhrase, setSearchPhrase] = useState("");
+  const [debouncedSearch, setDebouncedSearch] = useState("");
 
   const requestServer = useServerRequest();
 
   useEffect(() => {
-    requestServer("fetchPosts", searchPhrase, page, PAGINATION_LIMIT).then(
+    setPage(1);
+  }, [debouncedSearch]);
+
+  useEffect(() => {
+    requestServer("fetchPosts", debouncedSearch, page, PAGINATION_LIMIT).then(
       ({ res, error }) => {
         if (error) return;
         // res = { posts, links }
         setPosts(res.posts);
       }
     );
-  }, [requestServer, page, shouldSearch]);
+  }, [requestServer, page, debouncedSearch]);
 
-  const startDelaySearch = useMemo(() => debounce(setShouldSearch, 2000), []);
+  const debounceSetSearch = useMemo(
+    () => debounce(setDebouncedSearch, 2000),
+    []
+  );
 
   const onSearch = ({ target }) => {
     setSearchPhrase(target.value);
-    startDelaySearch(!shouldSearch);
+    debounceSetSearch(target.value);
   };
 
   return (
