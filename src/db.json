@@ -185,23 +185,11 @@
     },
     {
       "author_id": "qwertyui",
-      "post_id": "002",
-      "published_at": "2025-09-25 08:57",
-      "content": "eeeeeeeeeeee",
-      "id": "Buy06Km"
+      "post_id": "003",
+      "published_at": "2025-09-25 13:21",
+      "content": "fgdadgadg",
+      "id": "iQ0CDdj"
     }
   ],
-  "sessions": [
-    {
-      "hash": "0.09030705633751479055604249879252165555953979492188",
-      "user": {
-        "id": "qwertyui",
-        "login": "Adam",
-        "password": "qwe123",
-        "registeredAt": "2025-02-01 10:04",
-        "roleId": 0
-      },
-      "id": 1
-    }
-  ]
+  "sessions": []
 }
