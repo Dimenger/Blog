@@ -27,7 +27,7 @@ npm i styled-components prop-types react-hook-form yu react-router redux redux-t
 
 3. Таблица БД:
 
-   - пользователи: -users: id / login / password / registed_at / role_id
+   - пользователи: -users: id / login / password / registered_at / role_id
    - роли пользователя: -roles: id / name
    - статьи: -posts: id / title / image_url / content / published_at
    - комментрии: -comments: id / author_id / post_id / content

@@ -1,21 +1,15 @@
-import { getCurrentDate } from "./generate-date";
-
-export const addUser = async (login, password) => {
+export const setUserRole = async (userId, roleId) => {
   try {
-    const response = await fetch("http://localhost:3000/users", {
-      method: "POST",
+    const response = await fetch(`http://localhost:3000/users/${userId}`, {
+      method: "PATCH",
       headers: { "Content-Type": "application/json;charset=utf-8" },
       body: JSON.stringify({
-        login,
-        password,
-        registed_at: getCurrentDate(),
-        role_id: 2,
+        role_id: roleId,
       }),
     });
     if (!response.ok) {
       throw new Error(`Ошибка ${response.status}: ${response.statusText}`);
     }
-    return await response.json();
   } catch (error) {
     console.error("Ошибка загрузки:", error);
   }
