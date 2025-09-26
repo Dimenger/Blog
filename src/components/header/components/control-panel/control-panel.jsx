@@ -8,7 +8,8 @@ import {
   selectUserLogin,
   selectUserSession,
 } from "../../../../selectors";
-import { logout } from "../../../../action/logout";
+import { logout } from "../../../../actions/logout";
+import { checkAccess } from "../../../../utils";
 
 import styled from "styled-components";
 
@@ -30,6 +31,13 @@ const ControlPanelConteiner = ({ className }) => {
   const login = useSelector(selectUserLogin);
   const session = useSelector(selectUserSession);
 
+  const onLogout = () => {
+    dispatch(logout(session));
+    sessionStorage.getItem("useData");
+  };
+
+  const isAdmin = checkAccess([ROLE.ADMIN], roleId);
+
   return (
     <div className={className}>
       <RightAligned>
@@ -40,22 +48,22 @@ const ControlPanelConteiner = ({ className }) => {
         ) : (
           <>
             <UserName>{login}</UserName>
-            <Icon
-              id="fa-sign-out"
-              margin="10px 5px"
-              onClick={() => dispatch(logout(session))}
-            />
+            <Icon id="fa-sign-out" margin="10px 5px" onClick={onLogout} />
           </>
         )}
       </RightAligned>
       <RightAligned>
         <Icon id="fa-backward" margin="10px 5px" onClick={() => navigate(-1)} />
-        <Link to="/post">
-          <Icon id="fa-file-text-o" margin="10px 5px" />
-        </Link>
-        <Link to="/users">
-          <Icon id="fa-users" margin="10px 5px" />
-        </Link>
+        {isAdmin && (
+          <>
+            <Link to="/post">
+              <Icon id="fa-file-text-o" margin="10px 5px" />
+            </Link>
+            <Link to="/users">
+              <Icon id="fa-users" margin="10px 5px" />
+            </Link>
+          </>
+        )}
       </RightAligned>
     </div>
   );

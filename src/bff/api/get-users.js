@@ -8,7 +8,6 @@ export const getUsers = async () => {
     }
 
     const users = await response.json();
-    console.log("Полученные данные users:", users);
 
     return users && users.map(transformUser);
   } catch (error) {
