@@ -1,9 +1,11 @@
+import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 import { H2 } from "../../../components/h2/h2";
 import { Icon } from "../../../components/icon/icon";
 import { SpecialPanel } from "../comments/components/special-panel/special-panel";
 
 import styled from "styled-components";
+import { PROP_TYPE } from "../../../constants";
 
 const PostContentContainer = ({
   className,
@@ -41,3 +43,7 @@ export const PostContent = styled(PostContentContainer)`
     font-size: 18px;
   }
 `;
+
+PostContent.propTypes = {
+  post: PROP_TYPE.POST,
+};

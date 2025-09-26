@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const iconContainer = ({ className, id, ...props }) => (
@@ -15,3 +16,7 @@ export const Icon = styled(iconContainer)`
     cursor: pointer;
   }
 `;
+
+Icon.propTypes = {
+  id: PropTypes.string.isRequired,
+};
