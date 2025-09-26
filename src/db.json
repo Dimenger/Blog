@@ -185,11 +185,30 @@
     },
     {
       "author_id": "qwertyui",
+      "post_id": "002",
+      "published_at": "2025-09-26 12:07",
+      "content": "affsafdsa",
+      "id": "q3HFlhm"
+    },
+    {
+      "author_id": "qwertyui",
       "post_id": "003",
-      "published_at": "2025-09-25 13:21",
-      "content": "fgdadgadg",
-      "id": "iQ0CDdj"
+      "published_at": "2025-09-26 12:09",
+      "content": "ffffffffff",
+      "id": "MiZV1H9"
     }
   ],
-  "sessions": []
+  "sessions": [
+    {
+      "hash": "0.71636064879052185894181548064807429909706115722656",
+      "user": {
+        "id": "qwertyui",
+        "login": "Adam",
+        "password": "qwe123",
+        "registeredAt": "2025-02-01 10:04",
+        "roleId": 0
+      },
+      "id": 1
+    }
+  ]
 }
