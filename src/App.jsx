@@ -4,12 +4,14 @@ import { useDispatch } from "react-redux";
 import { setUser } from "./actions";
 import { Header } from "./components/header/header";
 import { Footer } from "./components/footer/footer";
+import { Error } from "./components/error/error";
 import { Authorization } from "./pages/authorization/authorization";
 import { Registration } from "./pages/registration/registration";
 import { Users } from "./pages/users/users";
 import { Post } from "./pages/post/post";
 import { Modal } from "./components/modal/modal";
 import { Main } from "./pages/main/main";
+import { ERROR } from "./constants";
 
 import styled from "styled-components";
 
@@ -60,7 +62,7 @@ export function App() {
             <Route path="/post" element={<Post />} />
             <Route path="/post/:id" element={<Post />} />
             <Route path="/post/:id/edit" element={<Post />} />
-            <Route path="*" element={<div>Error</div>} />
+            <Route path="*" element={<Error error={ERROR.PAGE_NOT_EXIST} />} />
           </Routes>
         </Page>
         <Footer />
