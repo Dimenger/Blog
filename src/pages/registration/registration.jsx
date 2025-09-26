@@ -9,7 +9,7 @@ import { Button } from "../../components/button/button";
 import { AuthFormError } from "../../components/auth-form-error/auth-form-error";
 import { H2 } from "../../components/h2/h2";
 import { Navigate } from "react-router-dom";
-import { setUser } from "../../action";
+import { setUser } from "../../actions";
 import { selectUserRole } from "../../selectors";
 import { ROLE } from "../../constants";
 import { useResetForm } from "../../hooks";
@@ -71,6 +71,7 @@ const RegistrationContainer = ({ className }) => {
         return;
       }
       dispatch(setUser(res));
+      sessionStorage.setItem("userData", JSON.stringify(res));
     });
   };
 
