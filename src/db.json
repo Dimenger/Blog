@@ -13,6 +13,13 @@
       "password": "qwe123",
       "registered_at": "2025-09-19 15:40",
       "role_id": 2
+    },
+    {
+      "login": "Ivan33",
+      "password": "qazwsx",
+      "registered_at": "2025-09-26 12:25",
+      "role_id": 2,
+      "id": "Rhrj8OZ"
     }
   ],
   "roles": [
@@ -196,6 +203,20 @@
       "published_at": "2025-09-26 12:09",
       "content": "ffffffffff",
       "id": "MiZV1H9"
+    },
+    {
+      "author_id": "d62b",
+      "post_id": "003",
+      "published_at": "2025-09-26 12:26",
+      "content": "asdasdsa",
+      "id": "FajGeox"
+    },
+    {
+      "author_id": "qwertyui",
+      "post_id": "003",
+      "published_at": "2025-09-26 12:27",
+      "content": "efeqfewq",
+      "id": "qtju_Mo"
     }
   ],
   "sessions": [
