@@ -12,6 +12,7 @@ import { useServerRequest } from "../../../../../hooks";
 
 import styled from "styled-components";
 import { useLayoutEffect } from "react";
+import { PROP_TYPE } from "../../../../../constants";
 
 const PostFormContainer = ({
   className,
@@ -94,3 +95,7 @@ export const PostForm = styled(PostFormContainer)`
     white-space: pre-line;
   }
 `;
+
+PostForm.propTypes = {
+  post: PROP_TYPE.POST.isRequired,
+};
